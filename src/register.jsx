@@ -40,6 +40,7 @@ const Register = () => {
           <input
             type="text"
             placeholder="Name"
+            id="name"
             ref = {nameRef}
             required
             style={{ width: "100%", padding: 8, marginTop: 4 }}
@@ -50,6 +51,7 @@ const Register = () => {
           <input
             type="email"
             placeholder="Email"
+            id="email"
             ref={emailRef}
             required
             style={{ width: "100%", padding: 8, marginTop: 4 }}
@@ -60,6 +62,7 @@ const Register = () => {
           <input
             type="password"
             placeholder="Password"
+            id="password"
             ref={psrdRef}
             required
             style={{ width: "100%", padding: 8, marginTop: 4 }}
