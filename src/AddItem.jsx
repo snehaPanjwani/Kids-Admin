@@ -23,6 +23,7 @@ export default function AddItem() {
   const mpRef = useRef();
   const spRef = useRef();
   const disRef = useRef();
+  const sizeRef = useRef();
   const qtyRef = useRef();
   const stockRef = useRef();
   const catRef = useRef();
@@ -37,7 +38,8 @@ export default function AddItem() {
     frm.append("markedPrice",mpRef.current.value);    
     frm.append("sellPrice",spRef.current.value);
     frm.append("discount",disRef.current.value);
-    frm.append("description",despRef.current.value);  
+    frm.append("description",despRef.current.value); 
+    frm.append("size", sizeRef.current.value); 
     frm.append("category",catRef.current.value);  
     frm.append("stock",stockRef.current.value);  
     frm.append("quantity",qtyRef.current.value);  
@@ -62,6 +64,7 @@ export default function AddItem() {
                 <input type="number" ref={spRef} placeholder="Sell Price" required/>
                 <input type="number" ref={disRef} placeholder="Discount" required/>
                 <input type="text" ref={despRef} placeholder="Description" required/>
+                <input ref={sizeRef} type="text" placeholder="Sizes (comma-separated e.g. S,M,L,XL)" required />
                 <select ref={catRef} placeholder="Category" required>
                     {constants?.category.map((ctg) => (
                         <option key={ctg} value={ctg}>{ctg}</option>
