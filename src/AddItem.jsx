@@ -9,7 +9,7 @@ export default function AddItem() {
       loadConstants();
     },[]);
     const loadConstants = async ()=>{
-    const res = await fetch("http://localhost:3000/admin/constants");
+    const res = await fetch("https://kidsearth.onrender.com/admin/constants");
     const responses = await res.json();
     if(responses.status){
       setConstants(responses.data);
